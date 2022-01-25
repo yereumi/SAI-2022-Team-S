@@ -1,1 +1,1 @@
-# SAI-2022-Team-S
+# SAI Season5 S팀 활동 공간입니다!
