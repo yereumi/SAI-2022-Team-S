@@ -2,20 +2,20 @@
 
 ```
 def rec(a):
-  if a==0:
-    return 1
-  return a * rec(a-1)
+    if a == 0:
+        return 1
+    return a * rec(a - 1)
+
 
 print(rec(3))
 
-rec3 = lambda a : a == 0 and 1 or a*rec(a-1)
+rec3 = lambda a: a == 0 and 1 or a * rec(a - 1)
 print(rec3(3))
 ```
 
 ## 3
 
-#신예지
-'''
+# 신예지
 import random
 marble = random.randrange(1, 100)
 print(marble)
@@ -34,10 +34,9 @@ while True :
     print("UP")
   else :
     print("DOWN")
- '''
 
-#최서영
-'''
+# 최서영
+
 import random
 marble=random.randrange(1,00)
 trial=6
@@ -56,10 +55,8 @@ while trial>0:
   trial=trial-1
   if trial==0:
     print("'우리 깐부사이는 아니잖아~탕탕'")
-'''
 
-#박성열 뒤에서 첫째..!
-'''
+# 박성열 뒤에서 첫째..!
 import random
 marble = random.randrange(1, 100)
 
@@ -75,10 +72,8 @@ for i in range(6):
     else:
         print("네가.. 뭐라고 했더라..?")
         break
-'''
 
-#이수영
-'''
+# 이수영
 import random
 
 marble = random.randrange(1,100)
@@ -100,23 +95,22 @@ while i < 6:
         print("네가..뭐라고 했더라..?")
         break
     i+=4
-'''
 
 ## 4
 
-#신예지
-'''
+# 신예지
 n1, n2, n3, n4 = input().split(" ")
 
-mylist = [n1, n2, n3, n4, '+', '-', '*', '/', '%']
+mylist = ['+', '-', '*', '/', '%']
 
-for i, j in mylist :
-  if eval(f"{n1}{i}{n2}{j}{n3}") == n4 :
-    print(f"{n1}{i}{n2}{j}{n3}={n4}")
-'''
+for i in mylist :
+    for j in mylist :
+        if i == j :
+            continue
+        elif eval(f"{n1}{i}{n2}{j}{n3}") == eval(n4) :
+            print(f"{n1}{i}{n2}{j}{n3}={n4}")
 
-#박성열
-'''
+# 박성열
 op = ['+', '-', '*', '/', '%']
 #operate
 In = list(map(str, input().split()))
@@ -127,14 +121,12 @@ for i in range(5):
 
         result = eval(In[0]+op[i]+In[1]+op[j]+In[2]) #연산 결과 저장
 
-        if result == int(In[3]):
+        if result == int(In[3]): 
             print("%s%s%s%s%s=%s" %(In[0], op[i], In[1], op[j], In[2], In[3]))
-'''
 
-#감사합니다 쩔어...>< 멋집니다.
+# 감사합니다 쩔어...>< 멋집니다.
 
-#이수영 4 짧으면 간지다!
-'''
+# 이수영 4 짧으면 간지다!
 a,b,c,d = input().split()
 s = ['+', '-', '*', '/', '%']
 for i in s: #오..!
@@ -142,12 +134,10 @@ for i in s: #오..!
         if (j!=i):
             if (int(d)==eval(f'{a}{i}{b}{j}{c}')):
                 print(f'{a}{i}{b}{j}{c}={d}')
-'''
 
 ## 5
 
-#박성열
-'''
+# 박성열
 m, k, k2, n = map(int, input().split())
 
 ar1=[] #ar1 배열 선언
@@ -181,10 +171,8 @@ for i in range(m): #행렬곱
     result.append(ar)
 
 print(result)
-'''
 
-#이수영 5번 #멋지다..!
-'''
+# 이수영 5번 #멋지다..!
 m,k,k1,n = input().split()
 mat1 = []
 mat2 = []
@@ -205,4 +193,3 @@ for i in range(int(m)):
         sub_matrix.append(tmp)
     ans_matrix.append(sub_matrix)
 print(ans_matrix)
-'''
